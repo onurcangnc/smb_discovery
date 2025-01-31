@@ -52,7 +52,7 @@ chmod +x crackmap_automation.sh
 - Uses crackmapexec for SMB authentication attempts.
 
 ### Prerequisites
-- Ensure the following tools are installed:
+Ensure the following tools are installed:
 
 - enum4linux-ng
 - netexec
