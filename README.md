@@ -59,6 +59,48 @@ Ensure the following tools are installed:
 - smbmap
 - crackmapexec
 
+## Silent Scripts (Stealth Mode)
+
+These scripts are designed for quieter operations with randomized or delayed scanning intervals to avoid triggering detections.
+
+### 1. `silent_netexec.sh`
+
+Stealthy SMB share enumeration using `netexec` with randomized delays.
+
+### Features:
+- Reads subnet list from file.
+- Authenticated SMB scan using `netexec --shares`.
+- Random sleep (3–10 seconds) between scans.
+
+### Usage:
+```bash
+chmod +x silent_netexec.sh
+./silent_netexec.sh
+```
+
+### 5. `silent_crackmap.sh`
+
+Silent SMB login attempts using `crackmapexec` with uniform delays.
+
+### Features:
+- Reads subnet list from file.
+- Uses credentials to authenticate via `crackmapexec`.
+- Waits 10 seconds between each scan.
+
+### Usage:
+```bash
+chmod +x silent_crackmap.sh
+./silent_crackmap.sh
+```
+
+### Prerequisites
+Ensure the following tools are installed:
+
+- `enum4linux-ng`
+- `netexec`
+- `smbmap`
+- `crackmapexec`
+
 ## Notes
 - Modify the USERNAME and PASSWORD variables in netexec+smbmap.sh and crackmap_automation.sh before use.
 - Ensure appropriate permissions before executing:
